@@ -35,8 +35,8 @@ public class MainGLEventsListener implements GLEventListener {
         bottomPoint.x = (center.x + 2 * bottomPoint.x) / (1 + 2);
 
         Point centerOut = new Point(center.x, center.y, center.z + size);
-        Point topOut = new Point(bottomPoint.x + (bottomPoint.x - center.x) * 1.5f, bottomPoint.y + (bottomPoint.y - center.y) * 1.5f, bottomPoint.z + size);
-        Point bottomOut = new Point(topPoint.x + (topPoint.x - center.x) * 0.4f, topPoint.y + (topOut.y - center.y) * 0.4f, topPoint.z + size);
+        Point topOut = new Point(bottomPoint.x + (bottomPoint.x - center.x) * 1.7f, bottomPoint.y + (bottomPoint.y - center.y) * 1.7f, bottomPoint.z + size);
+        Point bottomOut = new Point(topPoint.x + (topPoint.x - center.x) * 0.7f, topPoint.y + (topPoint.y - center.y) * 0.7f, topPoint.z + size);
 
         Color firstColor = new Color((float)Math.random(), (float)Math.random(), (float)Math.random());
         Color color = new Color(firstColor.r/10, firstColor.g/10, firstColor.b/10);
@@ -60,7 +60,7 @@ public class MainGLEventsListener implements GLEventListener {
 
             if (i%2 == 0) {
                 if (deep < 2) {
-                    drawStar(gl, topPoint, size / 3, deep + 1);
+                    drawStar(gl, topPoint, size / 2.5f, deep + 1);
                 }
                 topPoint = turnPoint(topPoint, center, (float)Math.PI * 2/5);
                 bottomOut = turnPoint(bottomOut, centerOut, (float)Math.PI * 2/5);
